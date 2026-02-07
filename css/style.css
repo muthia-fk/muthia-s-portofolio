@@ -681,3 +681,63 @@ body.dark-mode .skill-card h3,
 body.dark-mode .skill-card ul li {
     color: #CF0F47;
 }
+
+/* ======================
+   Mobile Responsive UI
+   ====================== */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 18px;
+        line-height: 1.4;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    nav button {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .about-card {
+        padding: 20px;
+    }
+
+    .about-header h3 {
+        font-size: 18px;
+    }
+
+    .about-subtitle {
+        font-size: 13px;
+    }
+
+    /* Skills jadi 1 kolom */
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Projects jadi 1 kolom */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card img {
+        height: auto;
+    }
+
+    /* Social icons lebih gede biar gampang dipencet */
+    .social-icons a {
+        font-size: 22px;
+        margin: 0 8px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
