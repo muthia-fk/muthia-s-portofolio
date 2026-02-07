@@ -686,14 +686,6 @@ body.dark-mode .skill-card ul li {
    Mobile Responsive UI
    ====================== */
 @media (max-width: 768px) {
-
-    header h1 {
-        font-size: 18px;
-        line-height: 1.4;
-        padding: 0 10px;
-        text-align: center;
-    }
-
     section {
         opacity: 1 !important;
         transform: none !important;
@@ -745,5 +737,17 @@ body.dark-mode .skill-card ul li {
 
     footer p {
         font-size: 12px;
+    }
+
+    header {
+        padding: 12px 12px;
+    }
+
+    header h1 {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 8px;
+        text-align: center;
+        word-wrap: break-word;
     }
 }
