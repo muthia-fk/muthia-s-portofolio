@@ -88,7 +88,7 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  threshold: 0.4 // cover 40% area section baru dianggap terlihat
+  threshold: 0.2 // cover 40% area section baru dianggap terlihat
 });
 
 // Apply ke semua section
