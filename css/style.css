@@ -694,6 +694,12 @@ body.dark-mode .skill-card ul li {
         text-align: center;
     }
 
+    section {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+    }
+
     nav {
         flex-wrap: wrap;
         gap: 8px;
