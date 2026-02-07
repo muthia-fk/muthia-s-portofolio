@@ -18,11 +18,6 @@ The website is built to present my academic background, technical abilities, and
 - CSS
 - JavaScript
 
-## Author
-**Muthia Febrahma Khoirunnisa**  
-Informatics Student, Semester 4  
-Universitas Siliwangi
-
 ---
 
 © 2026 Muthia Febrahma Khoirunnisa
