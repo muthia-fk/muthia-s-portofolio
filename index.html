@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Portofolio Muthia Febrahma Khoirunnisa 247006111130</title>
+    <link rel="icon" href="assets/images/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Welcome to 
+            <span class="symbol star">⋆</span><span class="symbol dot">.</span> 
+            <span class="symbol pink">𐙚</span><span class="symbol blue">˚</span> 
+            <span class="symbol lilac">࿔</span> 
+            Muthia's 
+            <span class="symbol pink">𝜗𝜚</span><span class="symbol blue">˚</span><span class="symbol star">⋆</span> 
+            portofolio page!
+        </h1>
+        <nav>
+            <button onclick="scrollToSection('about')">About Me</button>
+            <button onclick="scrollToSection('skills')">Skills</button>
+            <button onclick="scrollToSection('projects')">Projects</button>
+            <button onclick="scrollToSection('contact')">Contact</button>
+            <button id="toggleDarkMode"><i class="fas fa-moon"></i></button>
+        </nav>
+    </header>
+
+    <section align="center" id="about">
+        <h2>About Me</h2>
+
+        <div class="about-card">
+            <div class="about-header">
+                <img src="assets/images/muthia.jpeg" class="profile-pic" alt="Foto Muthia">
+                <h3>Muthia Febrahma Khoirunnisa</h3>
+                <span class="about-subtitle">Mahasiswi Semester 4 · Informatika · Universitas Siliwangi</span>
+            </div>
+
+            <div class="about-body">
+                <p>Saya adalah mahasiswi yang memiliki ketertarikan pada bidang teknologi dan pengembangan keterampilan digital.</p>
+                <p>Saat ini, saya sedang mengembangkan kemampuan di bidang pemrograman,desain antarmuka, serta keterampilan pendukung lainnya yang relevan dengan dunia digital.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section align="center" id="skills">
+        <div style="display: flex;align-items: center;margin: 40px 0">
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+            <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+        </div>
+        <h2>Skills</h2>
+
+        <div class="skills-wrapper">
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <ul>
+                    <li><strong>HTML & CSS</strong> – Membuat struktur dan tampilan website yang responsif dan menarik</li>
+                    <li><strong>JavaScript</strong> – Menambahkan interaksi dan logika dasar pada website</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <ul>
+                    <li><strong>Python</strong> – Pemrograman dasar, logika program, dan pengolahan data sederhana</li>
+                    <li><strong>Java</strong> – Pemrograman berbasis objek dan pengembangan aplikasi dasar</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Design & Tools</h3>
+                <ul>
+                    <li><strong>Figma</strong> – Mendesain UI/UX, wireframe, dan prototype aplikasi</li>
+                    <li><strong>Canva</strong> – Membuat desain visual dan konten digital</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3>Other Skills</h3>
+                <ul>
+                    <li><strong>Media Sosial</strong> – Menguasai platform Instagram, Facebook, dan LinkedIn untuk personal branding dan networking</li>
+                    <li><strong>Microsoft Office</strong> – Menguasai Word, Excel, dan PowerPoint untuk kebutuhan administrasi dan presentasi</li>
+                    <li><strong>Bahasa Inggris</strong> – Mampu berkomunikasi secara lisan dan tulisan untuk kebutuhan akademik dan umum</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <section align="center" id="projects">
+        <div style="display: flex;align-items: center;margin: 40px 0">
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+            <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+        </div>
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <article class="project-card">
+                <img src="assets/images/calclog.png" alt="FitLife screenshot">
+                <div class="project-body">
+                    <h3>CalcLog</h3>
+                    <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                    <p>CalcLog hadir sebagai website pembelajaran yang menyediakan materi fungsi logaritma secara komprehensif, dilengkapi dengan contoh soal, pembahasan step-by-step, dan fitur kalkulator interaktif untuk melatih kemampuan kalian dalam menyelesaikan soal-soal logaritma.</p>
+                    <div class="project-tags"><span>E-Learning</span><span>Logarithm</span><span>Calculator</span></div>
+                    <div class="project-actions">
+                        <a href="https://calc-log-six.vercel.app/" target="_blank" class="project-btn">View Site</a>
+                        <a href="https://github.com/muthia-fk/CalcLog.github.io.git" target="_blank" class="project-btn">Repo</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <img src="assets/images/simspageplay.png" alt="FashionTrend screenshot">
+                <div class="project-body">
+                    <h3>PagePlay Simulator</h3>
+                    <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                    <p>Simulasi ini dibuat untuk memvisualisasikan cara kerja beberapa algoritma Page Replacement seperti FIFO, LRU, dan Optimal. Program dapat menampilkan hasil simulasi dalam bentuk teks dan visualisasi grafik.</p>
+                    <div class="project-tags"><span>Simulator</span><span>Page Replacement Algorithm</span></div>
+                    <div class="project-actions">
+                        <a href="https://github.com/Sitiqori/Project-SO-IF-Page-Replacement-Simulator.git" target="_blank" class="project-btn">Repo</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="assets/images/kitten.png" alt="Balooney screenshot">
+                <div class="project-body">
+                    <h3>NANIverse</h3>
+                    <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                    <p>Welcome to NANIverse, ruang musik pribadiku tempat semua lagu favoritku berkumpul. Dari chill sampai upbeat, setiap track punya cerita dan mood sendiri. Tinggal play, nikmati, dan vibe bareng.</p>
+                    <div class="project-tags"><span>Music</span><span>WordPress</span><span>Spotify</span><span>Song</span></div>
+                    <div class="project-actions">
+                        <a href="https://naniverse3.wordpress.com/" target="_blank" class="project-btn">View Site</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card">
+                <img src="assets/images/mindara-logo.png" alt="Mindara logo">
+                <div class="project-body">
+                    <h3>Mindara</h3>
+                    <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                    <p>Mindara adalah platform digital yang menyediakan berbagai layanan kesehatan mental dan kebugaran. Dengan antarmuka yang ramah pengguna dan fitur-fitur inovatif, Mindara membantu pengguna merawat kesehatan mental mereka secara efektif.</p>
+                    <div class="project-tags"><span>Health</span><span>Mental Wellness</span><span>Web Platform</span></div>
+                    <div class="project-actions">
+                        <a href="https://github.com/muthia-fk/Mindara" target="_blank" class="project-btn">Repo</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section align="center" id="contact">
+        <div style="display: flex;align-items: center;margin: 40px 0">
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+            <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                <div style="flex: 1;height: 1px;background: #ccc"></div>
+        </div>
+        <h2>Contact</h2>
+        <div class="social-icons">
+            <a href="mailto:mutrafa123@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/muthia_fk" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/in/muthia-febrahma-khoirunnisa-a51634286" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://facebook.com/emir.790839" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://github.com/muthia-fk" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://open.spotify.com/user/31keua5xcpern67ypp3zpayksgyu?si=e64ed2b2dba0419a" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+    </section>
+
+        <div style="display: flex;align-items: center;margin: 40px 0">
+            <div style="flex: 1;height: 1px;background: #ccc"></div>
+            <span class="section-decor" style="padding: 0 15px;color: #FFA4A4;font-size: 14px">✦ ✦ ✦</span>
+                <div style="flex: 1;height: 1px;background: #ccc"></div>
+        </div>
+
+        <div class="action-row">
+            <button class="center-button" onclick="showMessage()">Klik Saya</button>
+
+            <!-- Back to Top Button -->
+            <div class="back-to-top-container">
+                <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+            </div>
+        </div>
+
+    <footer>
+        <p>&copy; 2026 Muthia Febrahma Khoirunnisa | All Rights Reserved</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

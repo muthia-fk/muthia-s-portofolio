@@ -1,0 +1,683 @@
+/* Cheerful Mode (Light) */
+@font-face {
+    font-family: 'New Spirit';
+    src: url('assets/fonts/New-Spirit-Medium.otf') format('opentype');
+}
+
+body {
+    font-family: 'New Spirit', cursive;
+    margin: 0;
+    padding-top: 70px;
+    background-color: #FCF9EA;
+    color: #FFA4A4;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 164, 164, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 189, 189, 0.8);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+section {
+    padding: 20px;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    scroll-margin-top: 120px;
+}
+
+#about {
+    margin-top: 60px;
+}
+
+button {
+    font-family: 'New Spirit', cursive;
+    background-color: #BADFDB; /* biru pastel */
+    color: #FFA4A4; /* ungu cerah, kontras */
+    border: none;
+    padding: 10px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFA4A4; /* pink pastel */
+    color: #FFFFE0; /* soft yellow agar cerah */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #FFBDBD;
+}
+
+footer {
+    background-color: #FFA4A4;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-top: 4px solid #FFBDBD;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Neon Mode */
+body.dark-mode {
+    background-color: #000000;
+    color: #FFDEDE;
+}
+
+body.dark-mode header {
+    background-color: #CF0F47;
+    color: #FFDEDE;
+    border-bottom: 4px solid #FF0B55;
+}
+
+body.dark-mode section {
+    background-color: #000000;
+    color: #FFDEDE;
+}
+
+/* Neon mode: section headings */
+body.dark-mode section h2 {
+    color: #CF0F47;
+}
+
+body.dark-mode section p {
+    color: #CF0F47;
+}
+
+body.dark-mode button {
+    background-color: #000000; /* pink neon */
+    color: #FFDEDE; /* ungu cerah */
+    box-shadow: 0 0 10px #CF0F47;
+}
+
+body.dark-mode button:hover {
+    background-color: #CF0F47;
+    color: #FFFFFF; /* putih biar kontras */
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FFDEDE;
+}
+
+body.dark-mode footer {
+    background-color: #CF0F47;
+    color: #FFDEDE;
+    border-top: 4px solid #FF0B55;
+}
+
+/* Neon mode: decorative separators between sections */
+body.dark-mode .section-decor {
+    color: #FF0B55 !important;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px; /* force 1:1 aspect ratio */
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Decorative image frame wrapper */
+.profile-frame {
+    position: relative;
+    width: 210px; /* slightly larger than photo */
+    height: 210px;
+    margin: 25px auto 16px auto;
+}
+
+.profile-frame .profile-pic {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: none;
+    margin-top: -39px;
+}
+
+.profile-frame .frame-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    object-fit: contain;
+}
+
+/* Use CSS pseudo-element to place an image-frame in front when available.
+   If `assets/frame.png` exists the browser will load it; otherwise nothing shows.
+*/
+.profile-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* pastel (light) mode frame */
+    background-image: url('../assets/images/framecircle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+    z-index: 3; /* ensure frame is in front */
+}
+
+.profile-frame .profile-pic { z-index: 2; }
+
+/* Neon mode uses a different frame image */
+body.dark-mode .profile-frame::after {
+    background-image: url('../assets/images/frame.png');
+}
+
+/* hide HTML overlay image if present (we use the pseudo-element instead) */
+.profile-frame .frame-overlay { display: none; }
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #FFBDBD;
+}
+
+.social-icons {
+    margin: 15px 0;
+}
+
+.social-icons a {
+    color: #FFA4A4;
+    font-size: 28px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ADD8E6;
+    transform: scale(1.2);
+}
+
+body.dark-mode .social-icons a {
+    color: #FFDEDE;
+}
+
+body.dark-mode .social-icons a:hover {
+    color: #CF0F47; /* merah neon */
+    text-shadow: 0 0 10px #CF0F47;
+}
+
+/* Toggle Dark Mode Button */
+#toggleDarkMode {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleDarkMode:hover {
+    transform: scale(1.2);
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+body.dark-mode #toggleDarkMode {
+    color: #FFDEDE;
+}
+
+body.dark-mode #toggleDarkMode:hover {
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700;
+}
+
+/* Back to Top Button (di atas footer, rata kanan, fade-in/out) */
+.back-to-top-container {
+    text-align: right;
+    margin: 20px;
+}
+
+#backToTop {
+    background-color: #BADFDB;
+    color: #FFA4A4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px; /* kapsul */
+    cursor: pointer;
+    font-size: 20px; /* ukuran ikon Font Awesome */
+    box-shadow: 0 0 10px #00000033;
+    transition: opacity 0.5s ease, background-color 0.3s ease, 
+                transform 0.2s ease, box-shadow 0.3s ease;
+    opacity: 1; /* default terlihat */
+}
+
+#backToTop.hidden {
+    opacity: 0; /* fade out */
+    pointer-events: none; /* tidak bisa diklik saat hidden */
+}
+
+#backToTop:hover {
+    background-color: #FFA4A4;
+    color: #ADD8E6;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #BADFDB;
+}
+
+/* Neon Mode */
+body.dark-mode #backToTop {
+    background-color: #FF0B55;
+    color: #000000;
+    box-shadow: 0 0 10px #CF0F47;
+}
+
+body.dark-mode #backToTop:hover {
+    background-color: #CF0F47;
+    color: #000000; /* kuning keemasan saat hover */
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ffffff; /* glow kuning */
+}
+
+.yellow {
+    color: #FFD700; /* kuning */
+}
+
+.soft-pink {
+    color: #FFB6C1; /* soft pink */
+}
+
+.lilac {
+    color: #C8A2C8; /* lilac */
+}
+
+.soft-blue {
+    color: #ADD8E6; /* soft blue */
+}
+
+.soft-green {
+    color: #90EE90; /* soft green */
+}
+
+section {
+  opacity: 0;
+  transform: translateY(100px) scale(0.9);
+  filter: blur(5px);
+  transition: 
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out,
+    filter 0.8s ease-out;
+}
+
+/* Saat aktif (terlihat di viewport) */
+section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+.symbol {
+  display: inline-block;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Warna sesuai permintaan */
+.star { color: #FFD700; }       /* kuning */
+.pink { color: #FFB6C1; }       /* soft pink */
+.lilac { color: #C8A2C8; }      /* lilac */
+.blue { color: #ADD8E6; }       /* soft blue */
+.dot { color: #90EE90; }        /* soft green */
+
+/* Animasi berbeda untuk tiap simbol */
+.star {
+  animation-name: pulseStar;
+}
+@keyframes pulseStar {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.3) rotate(15deg); }
+}
+
+.pink {
+  animation-name: floatPink;
+}
+@keyframes floatPink {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.lilac {
+  animation-name: spinLilac;
+}
+@keyframes spinLilac {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.blue {
+  animation-name: waveBlue;
+}
+@keyframes waveBlue {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+.dot {
+  animation-name: bounceDot;
+}
+@keyframes bounceDot {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* Centered button utility */
+.center-button {
+    display: block;
+    margin: 20px auto;
+}
+
+/* Projects grid and card styles */
+.projects-grid {
+    display: grid;
+    /* desktop: 2 columns, keep each column at least 260px */
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px; /* constrain so layout shows two columns nicely */
+    margin: 20px auto;
+    padding: 0 12px;
+}
+
+.project-card {
+    background: #FFFFFF;
+    color: #333333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.06);
+    height: auto; /* allow card height to adjust to content */
+}
+
+.project-card img {
+    /* show full image without cropping and fit width */
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* do not crop image */
+    background: #f4f4f4; /* neutral background for images with different aspect ratios */
+}
+
+.project-body {
+    padding: 14px 16px 18px;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 0; /* no forced minimum so card can size naturally */
+}
+
+body .project-body h3 {
+    margin: 6px 0 8px;
+    color: #FFA4A4;
+}
+
+body.dark-mode .project-body h3 {
+    margin: 6px 0 8px;
+    color: #CF0F47;
+}
+
+.project-body p {
+    margin: 0 0 12px;
+    color: #FFA4A4;
+    flex: 1 0 auto;
+}
+
+body.dark-mode .project-body p {
+    margin: 0 0 12px;
+    color: #CF0F47;
+    flex: 1 0 auto;
+}
+
+.project-tags span {
+    display: inline-block;
+    background: #F6F6F6;
+    color: #FFA4A4;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+body.dark-mode .project-tags span {
+    display: inline-block;
+    background: #F6F6F6;
+    color: #CF0F47;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+/* spacing between tags container and action buttons */
+.project-tags {
+    margin-bottom: 12px;
+}
+
+.project-actions {
+    margin-top: 10px;
+    display: flex;
+    gap: 12px; /* increased gap between buttons */
+    margin-top: auto; /* push actions to bottom so cards align */
+}
+
+/* Ensure grid items align at start so equal-height cards look consistent */
+/* grid items default to stretch so cards size naturally */
+
+.project-btn {
+    background: #BADFDB;
+    color: #FFA4A4;
+    padding: 8px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-btn:hover {
+    background-color: #FFA4A4; /* pink pastel */
+    color: #FFFFE0; /* soft yellow agar cerah */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #FFBDBD;
+}
+
+
+
+/* Card hover lift */
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 36px #ADD8E6;
+}
+
+/* Modal styles */
+.modal { display: none; }
+.modal[aria-hidden="false"] { display: block; }
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+.modal-card {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 90%;
+    max-width: 820px;
+    border-radius: 12px;
+    overflow: hidden;
+    z-index: 2000;
+    display: flex;
+    gap: 0;
+}
+.modal-card img { width: 50%; height: auto; object-fit: cover; display: block; }
+.modal-content { padding: 18px; display: flex; flex-direction: column; }
+.modal-close {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .modal-card { flex-direction: column; }
+    .modal-card img { width: 100%; }
+    .projects-grid { grid-template-columns: 1fr; max-width: 640px; }
+}
+
+/* Dark mode adjustments for project cards */
+body.dark-mode .project-card {
+    background: #0b0b0b;
+    color: #FFDEDE;
+    box-shadow: 0 6px 18px rgba(255,13,88,0.06);
+}
+
+body.dark-mode .project-btn { background: #CF0F47; color: #000; }
+body.dark-mode .project-btn:hover {
+    background-color: #000000;
+    color: #CF0F47;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #FFDEDE;
+}
+
+/* ===== ABOUT CARD ===== */
+.about-card {
+    max-width: 400px;
+    margin: 30px auto;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 18px;
+    padding: 25px 30px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 40px #ADD8E6;
+}
+
+.about-header h3 {
+    margin: 10px 0 4px;
+    color: #FFA4A4;
+}
+
+.about-subtitle {
+    font-size: 14px;
+    color: #C8A2C8;
+}
+
+.about-body {
+    margin-top: 20px;
+}
+
+.about-body p {
+    color: #FFA4A4;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode .about-card {
+    background: #0b0b0b;
+    box-shadow: 0 0 25px #cf0f4766;
+}
+
+body.dark-mode .about-header h3,
+body.dark-mode .about-body p {
+    color: #CF0F47;
+}
+
+body.dark-mode .about-subtitle {
+    color: #FFDEDE;
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px #00000014;
+    text-align: left;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 40px #ADD8E6;
+}
+
+.skill-card h3 {
+    color: #FFA4A4;
+    margin-bottom: 14px;
+}
+
+.skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skill-card ul li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #FFA4A4;
+    line-height: 1.5;
+}
+
+/* ===== DARK MODE ===== */
+body.dark-mode .skill-card {
+    background: #0b0b0b;
+    box-shadow: 0 0 25px #cf0f4766;
+}
+
+body.dark-mode .skill-card h3,
+body.dark-mode .skill-card ul li {
+    color: #CF0F47;
+}
